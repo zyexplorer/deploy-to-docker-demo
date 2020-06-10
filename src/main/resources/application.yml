@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+  compression:
+    enabled: true
+
+spring:
+  profiles:
+    active: local
+
+  application:
+    name: docker-deploy
+
+
+# logback日志配置
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org.springframework.boot: error
+    org.springframework.security.oauth2: error
+    com.zy.explore.dockerdeploy: debug
